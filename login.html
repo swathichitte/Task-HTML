@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Login - User Portal</title>
+    
+</head>
+<body>
+
+  <form action="temp.html">
+    <h2>Login</h2>
+
+    <label for="email">Email:</label>
+    <input 
+      type="email" 
+      id="email" 
+      name="email" 
+      placeholder="example@gmail.com" 
+      pattern="[a-zA-Z0-9._%+-]+@gmail\.com" 
+      required 
+    />
+
+    <label for="password">Password:</label>
+    <input 
+      type="password" 
+      id="password" 
+      name="password" 
+      placeholder="Enter password" 
+      pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" 
+      required 
+      title="Must contain at least one number, one uppercase and lowercase letter, and at least 8 characters"
+    />
+
+    <input type="submit" value="Login" />
+
+    <div class="links">
+      <p><a href="forgot.html">Forgot Password?</a></p>
+      <p>New user? <a href="registration.html">Register here</a></p>
+    </div>
+  </form>
+
+</body>
+</html>
