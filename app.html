@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>TSRTC Bus Pass Application</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f7f8;
+      margin: 0;
+      padding: 20px;
+    }
+    fieldset {
+      border: 1px solid #ccc;
+      padding: 15px;
+      margin-bottom: 20px;
+      background-color: #f6f9f9;
+    }
+    legend {
+      background-color: #7dbccd;
+      color: white;
+      padding: 5px 10px;
+      font-weight: bold;
+    }
+    label {
+      display: block;
+      margin-top: 10px;
+      font-weight: bold;
+    }
+    input, select, textarea {
+      width: 90%;
+      padding: 8px;
+      margin-top: 5px;
+    }
+    table {
+      width: 100%;
+    }
+    td {
+      vertical-align: top;
+      padding-right: 20px;
+    }
+    .center {
+      text-align: center;
+    }
+    .submit-btn {
+      display: block;
+      margin: 0 auto;
+      padding: 10px 30px;
+      background-color: #f22d61;
+      color: white;
+      border: none;
+      font-size: 16px;
+      cursor: pointer;
+    }
+    .submit-btn:hover {
+      background-color: #c3214c;
+    }
+  </style>
+</head>
+<body>
+
+  <fieldset>
+    <div class="center">
+      <img src="tsrtc.jpg" width="180" height="150" alt="TSRTC Logo">
+      <h3 style="color: blue;">TELANGANA STATE ROAD TRANSPORT CORPORATION</h3>
+      <h3>GENERAL BUS PASS APPLICATION</h3>
+    </div>
+  </fieldset>
+
+  <form>
+    <fieldset>
+      <legend>Applicant Details</legend>
+      <table>
+        <tr>
+          <td>
+            <label for="name">Full Name <span style="color: red;">*</span></label>
+            <input type="text" id="name" name="name" required placeholder="Enter your name">
+          </td>
+          <td>
+            <label for="fatherName">Father's/Guardian's Name <span style="color: red;">*</span></label>
+            <input type="text" id="fatherName" name="fatherName" required placeholder="Enter guardian's name">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="dob">Date of Birth <span style="color: red;">*</span></label>
+            <input type="date" id="dob" name="dob" required>
+          </td>
+          <td>
+            <label>Gender <span style="color: red;">*</span></label>
+            <input type="radio" name="gender" value="Female" required> Female
+            <input type="radio" name="gender" value="Male" required> Male
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2">
+            <label>Age As On:</label>
+            <input type="number" min="0" max="150" placeholder="Years" style="width: 60px;"> Years
+            <input type="number" min="0" max="11" placeholder="Months" style="width: 60px;"> Months
+            <input type="number" min="0" max="31" placeholder="Days" style="width: 60px;"> Days
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="aadhar">Aadhar No:</label>
+            <input type="text" id="aadhar" name="aadhar" maxlength="12" pattern="\d{12}" placeholder="Enter 12-digit Aadhar number">
+          </td>
+          <td>
+            <label for="whatsapp">WhatsApp No <span style="color: red;">*</span></label>
+            <input type="tel" id="whatsapp" name="whatsapp" pattern="[0-9]{10}" required placeholder="10-digit number">
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="email">Email ID <span style="color: red;">*</span></label>
+            <input type="email" id="email" name="email" required placeholder="example@gmail.com">
+          </td>
+          <td>
+            <label for="photo">Upload Photo <span style="color: red;">*</span></label>
+            <input type="file" id="photo" name="photo" accept="image/*" required>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>Residential Address Details</legend>
+      <table>
+        <tr>
+          <td>
+            <label for="address">Applicant's Address <span style="color: red;">*</span></label>
+            <textarea id="address" name="address" rows="4" required></textarea>
+          </td>
+          <td>
+            <label for="district">District <span style="color: red;">*</span></label>
+            <select id="district" name="district" required>
+              <option value="">-- Select District --</option>
+              <option value="Hyderabad">Hyderabad</option>
+              <option value="Rangareddy">Rangareddy</option>
+              <option value="Medchal">Medchal</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="mandal">Mandal <span style="color: red;">*</span></label>
+            <select id="mandal" name="mandal" required>
+              <option value="">-- Select Mandal --</option>
+              <option value="Ameerpet">Ameerpet</option>
+              <option value="Kukatpally">Kukatpally</option>
+              <option value="Begumpet">Begumpet</option>
+            </select>
+          </td>
+          <td>
+            <label for="village">Village <span style="color: red;">*</span></label>
+            <select id="village" name="village" required>
+              <option value="">-- Select Village --</option>
+              <option value="Village1">Village 1</option>
+              <option value="Village2">Village 2</option>
+            </select>
+          </td>
+        </tr>
+        <tr>
+          <td>
+            <label for="pincode">Pincode <span style="color: red;">*</span></label>
+            <input type="text" id="pincode" name="pincode" maxlength="6" pattern="\d{6}" required placeholder="Enter 6-digit pincode">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+
+    <fieldset>
+      <legend>Pass Type Details</legend>
+      <label for="city">City <span style="color: red;">*</span></label>
+      <select id="city" name="city" required>
+        <option value="">-- Select City --</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Secunderabad">Secunderabad</option>
+      </select><br><br>
+
+      <label for="passType">Pass Type <span style="color: red;">*</span></label>
+      <select id="passType" name="passType" required>
+        <option value="">-- Select Pass Type --</option>
+        <option value="General">General</option>
+        <option value="Student">Student</option>
+        <option value="SeniorCitizen">Senior Citizen</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Mode of Payment & Pass Collection</legend>
+      <label for="paymentMode">Payment Mode <span style="color: red;">*</span></label>
+      <select id="paymentMode" name="paymentMode" required>
+        <option value="">-- Select Payment Mode --</option>
+        <option value="UPI">UPI</option>
+        <option value="Card">Credit/Debit Card</option>
+        <option value="Cash">Cash</option>
+      </select><br><br>
+
+      <label for="deliveryMode">Pass Delivery Mode <span style="color: red;">*</span></label>
+      <select id="deliveryMode" name="deliveryMode" required>
+        <option value="">-- Select Delivery Mode --</option>
+        <option value="Digital">Digital Pass (SMS/Email)</option>
+        <option value="Physical">Physical Collection</option>
+      </select><br><br>
+
+      <label for="collectionCenter">Collection Center <span style="color: red;">*</span></label>
+      <select id="collectionCenter" name="collectionCenter" required>
+        <option value="">-- Select Center --</option>
+        <option value="Ameerpet">Ameerpet</option>
+        <option value="Mehdipatnam">Mehdipatnam</option>
+        <option value="Uppal">Uppal</option>
+      </select>
+    </fieldset>
+
+    <input type="submit" class="submit-btn" value="Submit Application">
+  </form>
+
+</body>
+</html>
