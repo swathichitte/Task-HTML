@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Gourmet Delight Restaurant</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #fffaf0;
+      margin: 0;
+      padding: 0;
+    }
+    header, footer {
+      background-color: #d35400;
+      color: white;
+      text-align: center;
+      padding: 1em;
+    }
+    nav {
+      background-color: #f39c12;
+      padding: 10px;
+      text-align: center;
+    }
+    nav a {
+      margin: 0 15px;
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    section {
+      padding: 20px;
+    }
+    h2 {
+      color: #e67e22;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    th, td {
+      border: 1px solid #ddd;
+      padding: 10px;
+      text-align: left;
+    }
+    th {
+      background-color: #f8c471;
+    }
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+    .menu-img {
+      width: 200px;
+      height: 150px;
+      object-fit: cover;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>🍴 Gourmet Delight Restaurant</h1>
+  <p><em>The Taste That Brings You Back</em></p>
+</header>
+
+<nav>
+  <a href="#menu">Menu</a>
+  <a href="#gallery">Gallery</a>
+  <a href="#order">Order Online</a>
+  <a href="#contact">Contact</a>
+</nav>
+
+<main>
+
+  <section id="menu">
+    <h2>Our Menu</h2>
+
+    <!-- Starters Section -->
+    <article>
+      <h3>Starters</h3>
+      <ul>
+        <li>Tomato Soup - ₹100</li>
+        <li>Spring Rolls - ₹150</li>
+        <li>Chicken Wings - ₹200</li>
+      </ul>
+    </article>
+
+    <!-- Main Course Section -->
+    <article>
+      <h3>Main Course</h3>
+      <table>
+        <tr>
+          <th>Dish</th>
+          <th>Description</th>
+          <th>Price</th>
+        </tr>
+        <tr>
+          <td>Paneer Butter Masala</td>
+          <td>Soft paneer cubes in creamy tomato gravy</td>
+          <td>₹250</td>
+        </tr>
+        <tr>
+          <td>Chicken Biryani</td>
+          <td>Spiced rice with marinated chicken</td>
+          <td>₹300</td>
+        </tr>
+        <tr>
+          <td>Butter Naan</td>
+          <td>Soft flatbread with butter</td>
+          <td>₹40</td>
+        </tr>
+      </table>
+    </article>
+
+    <!-- Desserts Section -->
+    <article>
+      <h3>Desserts</h3>
+      <ol>
+        <li>Gulab Jamun</li>
+        <li>Chocolate Brownie</li>
+        <li>Ice Cream Sundae</li>
+      </ol>
+    </article>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery">
+    <h2>Gallery</h2>
+    <img src="gs.jpg" alt="Paneer Dish" class="menu-img" />
+    <img src="gs.jpg" alt="Biryani" class="menu-img" />
+    <img src="gs.jpg" alt="Dessert" class="menu-img" />
+  </section>
+
+  <!-- Multimedia -->
+  <section>
+    <h2>Chef's Special Video</h2>
+    <video controls width="300">
+      <source src="Doraemon_episode 1.mp4" type="video/mp4">
+      Your browser does not support video.
+    </video>
+
+    <h2>Background Music</h2>
+    <audio controls>
+      <source src="Dil Se.mp3" type="audio/mpeg">
+      Your browser does not support audio.
+    </audio>
+  </section>
+
+  <!-- Form Section -->
+  <section id="order">
+    <h2>Order Online</h2>
+    <form>
+      <label for="name">Name <span style="color:red">*</span></label>
+      <input type="text" id="name" name="name" required><br><br>
+
+      <label for="phone">Phone <span style="color:red">*</span></label>
+      <input type="tel" id="phone" name="phone" required><br><br>
+
+      <label>Choose your meal:</label><br>
+      <input type="checkbox" name="food" value="Paneer"> Paneer Butter Masala<br>
+      <input type="checkbox" name="food" value="Biryani"> Chicken Biryani<br><br>
+
+      <label>Spice Level:</label><br>
+      <input type="radio" name="spice" value="Mild" required> Mild
+      <input type="radio" name="spice" value="Medium"> Medium
+      <input type="radio" name="spice" value="Spicy"> Spicy<br><br>
+
+      <label for="delivery">Delivery Location</label><br>
+      <select id="delivery" name="delivery">
+        <option value="">--Select Area--</option>
+        <option value="Hyderabad">Hyderabad</option>
+        <option value="Secunderabad">Secunderabad</option>
+      </select><br><br>
+
+      <label for="instructions">Special Instructions:</label><br>
+      <textarea id="instructions" name="instructions" rows="4" cols="50"></textarea><br><br>
+
+      <label for="file">Upload Payment Screenshot:</label>
+      <input type="file" id="file" name="file"><br><br>
+
+      <input type="submit" value="Place Order">
+    </form>
+  </section>
+
+</main>
+
+<footer id="contact">
+  <p>&copy; 2025 Gourmet Delight Restaurant | 📞 Call us: <a href="tel:+918888888888">+91 88888 88888</a> | ✉️ Email: <a href="mailto:info@gourmetdelight.com">info@gourmetdelight.com</a></p>
+</footer>
+
+</body>
+</html>
